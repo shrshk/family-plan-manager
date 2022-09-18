@@ -1,13 +1,44 @@
 # Family Plan Manager
 This is a fork of [build your own mint](https://github.com/yyx990803/build-your-own-mint) complete all the steps from # Build Your Own Mint first.
 
-Things this repo does in addition to build-your-own-mint
-- Uses google sheets named ranges to build amount owed vs amount paid audit report.
-- below images show how the data is organized
+Goal of the project is simple:
+- Get bills data from google sheets via named ranges
+- Look up transactions via plaid and venmo statements
+- Build an audit report of amount owed vs amount paid and write it back to google sheets.
+- Check below screenshots to understand how it's done.
+
+# Instructions to run the project:
+- rename env.sample to env and populate it.
+- VENMO_DIR (directory in which your venmo statements are)
+- SHEETS_TRANSACTIONS_SHEET_NAME (name of the sheet where you want your transactions data be written to eg: Sheet1, Sheet2...)
+- SHEETS_TEST_NAME (name of the sheet used to test google sheets connection, used by npm run test-sheets)
+- other env variables are self explanatory or so I hope.
+- after following all the instructions from 'build your own mint' and populating above env variables, run below command
+  `npm run test`
+- you should then see transactions and audit sheets populated.
+
+# How it works:
+- As shown in the below screenshot named ranges are used to annotate Amount Owed and SearchKey (used to lookup transactions)
+- Transactions are retrieved from Plaid and venmo, since venmo doesn't have an API, statements need to be downloaded and placed in VENMO_DIR
+- All the transactions are processed and an audit table of amount owed/paid is built joining on Search Key.
+- This report is then written back to the spreadsheet.
+
+# Help:
+Feel free to suggest something, report a bug or improve the code.
+
+# Bills organization
+
+![Audit](https://github.com/shrshk/family-plan-manager/blob/master/images/billInfo.png)
+
+Note: 'N/A' means not applicable and the row is ignored.
+
+# Transactions
+
+![Audit](https://github.com/shrshk/family-plan-manager/blob/master/images/transactions.png)
+
+# Audit 
 
 ![Audit](https://github.com/shrshk/family-plan-manager/blob/master/images/audit.png)
-
-TBD
 
 
 # Build Your Own Mint
