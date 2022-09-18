@@ -1,3 +1,13 @@
+# Family Plan Manager
+This is a fork of [build your own mint](https://github.com/yyx990803/build-your-own-mint) complete all the steps from # Build Your Own Mint first.
+
+Things this repo does in addition to build-your-own-mint
+- Uses google sheets named ranges to build amount owed vs amount paid audit report.
+- below images show how the data is organized
+
+TBD
+
+
 # Build Your Own Mint
 
 ## Important Disclaimer
