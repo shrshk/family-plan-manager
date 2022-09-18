@@ -5,6 +5,8 @@ Things this repo does in addition to build-your-own-mint
 - Uses google sheets named ranges to build amount owed vs amount paid audit report.
 - below images show how the data is organized
 
+![Audit](https://github.com/shrshk/family-plan-manager/blob/master/images/audit.png)
+
 TBD
 
 
