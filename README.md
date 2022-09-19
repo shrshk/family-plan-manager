@@ -1,7 +1,7 @@
 # Family Plan Manager
 This is a fork of [build your own mint](https://github.com/yyx990803/build-your-own-mint) complete all the steps from # Build Your Own Mint first.
 
-Goal of the project is simple:
+# Goal of the project is simple:
 - Get bills data from google sheets via named ranges
 - Look up transactions via plaid and venmo statements
 - Build an audit report of amount owed vs amount paid and write it back to google sheets.
@@ -17,13 +17,7 @@ Goal of the project is simple:
   `npm run test`
 - you should then see transactions and audit sheets populated.
 
-# How it works:
-- As shown in the below screenshot named ranges are used to annotate Amount Owed and SearchKey (used to lookup transactions)
-- Transactions are retrieved from Plaid and venmo, since venmo doesn't have an API, statements need to be downloaded and placed in VENMO_DIR
-- All the transactions are processed and an audit table of amount owed/paid is built joining on Search Key.
-- This report is then written back to the spreadsheet.
-
-# Help:
+# Word:
 Feel free to suggest something, report a bug or improve the code.
 
 # Bills organization
